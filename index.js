@@ -21,7 +21,7 @@ if (db) {
     console.log('error connecting DB');
 }
 
-var port = process.env.port || 3000;
+var port = process.env.PORT || 3000;
 
 app.get('/', (req, resp) => resp.send('my simple rest api'));
 
