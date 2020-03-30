@@ -5,8 +5,7 @@ let app = express();
 let apiRoutes = require('./api-routes');
 
 app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(bodyParser.json());
-app.use(express.json())
+app.use(bodyParser.json());
 
 const uri = "mongodb+srv://fuatcakir:MB_41hf414@clusterfc-3xfqs.mongodb.net/vacationplans?retryWrites=true&w=majority";
 mongoose.connect(uri, { useNewUrlParser: true ,useUnifiedTopology: true });
