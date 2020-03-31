@@ -23,7 +23,7 @@ exports.new = function (req, res) {
     vacation.sharedesc = req.body.sharedesc;
  
 
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < req.body.tablevacat.length ; i++) {
         vacation.tablevacat.push({
             daystart: req.body.tablevacat[i].daystart,
             dayend: req.body.tablevacat[i].dayend,
