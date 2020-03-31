@@ -14,8 +14,9 @@ app.use(function(req, res, next) {
 });
 app.use(bodyParser.json());
 
-const uri = "mongodb+srv://fuatcakir:MB_41hf414@clusterfc-3xfqs.mongodb.net/vacationplans?retryWrites=true&w=majority";
+const uri = process.env.MONGODBURI;
 mongoose.connect(uri, { useNewUrlParser: true ,useUnifiedTopology: true });
+
 
 // const urilocal ='mongodb://localhost/vacationplans';
 // mongoose.connect(urilocal, { useNewUrlParser: true });

@@ -1,26 +1,28 @@
 var mongoose = require("mongoose");
 
 var vacationSchema = mongoose.Schema({
-    daystart: {
-        type: Date,
-        required: true
-    },
-    dayend: {
-        type: Date,
-        required: true
-    },
-    vacationCount: {
-        type: Number,
-        required: false
-    },
-    holidaycount: {
-        type: Number,
-        required: false
-    },
-    description: {
-        type: String,
-        required: false
-    },
+    tablevacat: [{
+        daystart: {
+            type: Date,
+            required: true
+        },
+        dayend: {
+            type: Date,
+            required: true
+        },
+        vacationcount: {
+            type: Number,
+            required: false
+        },
+        holidaycount: {
+            type: Number,
+            required: false
+        },
+        description: {
+            type: String,
+            required: false
+        }
+    }],
     sharedesc: {
         type: String,
         required: false
