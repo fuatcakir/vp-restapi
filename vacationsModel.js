@@ -26,6 +26,10 @@ var vacationSchema = mongoose.Schema({
     sharedesc: {
         type: String,
         required: false
+    },
+    totalvacationcount :{
+        type: Number,
+        required: false
     }
 }
 );

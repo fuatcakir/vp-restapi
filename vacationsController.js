@@ -21,7 +21,7 @@ exports.index = function (req, res) {
 exports.new = function (req, res) {
     var vacation = new Vacation();
     vacation.sharedesc = req.body.sharedesc;
- 
+    vacation.totalvacationcount = req.body.totalvacationcount;
 
     for (let i = 0; i < req.body.tablevacat.length ; i++) {
         vacation.tablevacat.push({
